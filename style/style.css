@@ -2,21 +2,55 @@ body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: 500;
 }
 
 .header {
   height: 765px;
-  background-image: url("../img/background-image.jpg");
+  max-height: 70vh;
+  background-image: url("../img/background-header.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
   font-weight: 500;
+  line-height: 1;
 }
 .header__nav {
   position: absolute;
   bottom: 25px;
   left: 0;
   right: 0;
+}
+.header__top {
+  position: absolute;
+  height: 76px;
+  top: 35px;
+  left: calc(50% - 115px / 2);
+  display: flex;
+}
+.header__phone, .header__action {
+  position: relative;
+  top: 62%;
+  margin-left: 82px;
+  color: white;
+}
+.header__action-link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  text-transform: uppercase;
+}
+.header__action-link:hover {
+  color: #D5C5AA;
+}
+
+.logo {
+  height: 76px;
+  width: 115px;
 }
 
 .nav {
@@ -48,10 +82,75 @@ body {
   color: #D5C5AA;
 }
 
+.section {
+  padding: 156px calc(50% - 470px);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.info__heading {
+  width: 314px;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+.info__heading_link {
+  color: #18A0FB;
+  text-decoration: none;
+}
+.info__text {
+  font-weight: 400;
+  max-width: 564px;
+}
+.info__text :first-child {
+  margin-top: 0;
+}
+.info__text :last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  background-image: url("../img/background-footer.jpg");
+  height: 540px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.footer__logo {
+  position: absolute;
+  top: 369px;
+  left: calc(50% - 115px / 2);
+}
+
 @media screen and (max-width: 980px) {
   .nav__list {
     flex-direction: column;
     align-items: center;
+  }
+
+  .header__top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__phone, .header__action {
+    margin: 5px auto;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info__heading {
+    text-align: center;
+  }
+
+  .section {
+    padding: 0;
   }
 }
 
