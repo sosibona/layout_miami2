@@ -1,0 +1,58 @@
+@import "reset";
+
+.header{
+  height: 765px;
+  background-image: url("../img/background-image.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-weight: 500;
+
+  &__nav {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+  }
+}
+
+.nav {
+  text-transform: uppercase;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin: 0 22.5px;
+    padding: 7px 20px;
+    white-space: nowrap;
+    line-height: 16px;
+
+    &_active {
+      background-color: #D5C5AA;
+      border-radius: 10px;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #D5C5AA;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
