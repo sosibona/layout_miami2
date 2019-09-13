@@ -22,7 +22,6 @@ $colorHeader: #D5C5AA;
 
   &__top {
     position: absolute;
-    height: $heightLogo;
     top: 35px;
     left: calc(50% - #{$widthLogo} / 2);
     display: flex;
@@ -32,7 +31,8 @@ $colorHeader: #D5C5AA;
     position: relative;
     top: 62%;
     margin-left: 82px;
-    color: white;
+		color: white;
+		margin-top: 52px;
   }
 
   &__action {
@@ -161,6 +161,7 @@ $colorHeader: #D5C5AA;
 
 		&__heading {
 			text-align: center;
+			width: 100%;
 		}
 	}
 	
