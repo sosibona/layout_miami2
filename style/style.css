@@ -126,7 +126,7 @@ strong {
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: -1.5em;
+  top: -1.6em;
 }
 .section:nth-child(even) {
   background-color: #eee;
@@ -223,28 +223,160 @@ strong {
   left: calc(50% - 115px / 2);
 }
 
+.consultation {
+  display: flex;
+  justify-content: space-between;
+}
+.consultation__field {
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.consultation__field_question {
+  margin: 24px 0;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.consultation__form {
+  width: 383px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form__label {
+  height: 54px;
+  width: 383px;
+  background-color: #eee;
+  margin-top: 15px;
+}
+.form__label_input {
+  height: inherit;
+  width: inherit;
+  outline: none;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.form__label_input::placeholder {
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #393939;
+  text-transform: uppercase;
+}
+.form__button {
+  margin-top: 15px;
+}
+
+.testimonials {
+  display: grid;
+  justify-content: center;
+  grid-gap: 65px;
+  grid-template-columns: repeat(3, 200px);
+}
+
+.person {
+  text-align: center;
+}
+.person__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+.person__name {
+  font-weight: 700;
+  margin-top: 12px;
+}
+.person__post {
+  margin: 0;
+  color: #696973;
+  font-style: italic;
+}
+.person__feedback {
+  position: relative;
+}
+.person__feedback::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/quotes.png);
+  width: 40px;
+  height: 33px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: calc(100% + 6px);
+  bottom: calc(100% + 6px);
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__adress {
+  width: 280px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.contacts__form {
+  width: 378px;
+}
+
+.form__label_area {
+  background-color: transparent;
+  border: 0;
+  height: 166px;
+  width: inherit;
+  resize: none;
+}
+.form__label_area::placeholder {
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #393939;
+  text-transform: uppercase;
+}
+
+.form_area {
+  height: 166px;
+}
+
+input[type] {
+  text-align: center;
+}
+
 @media screen and (max-width: 980px) {
-  .nav__list {
+  .nav__list,
+.header__top,
+.info,
+.photos,
+.consultation,
+.contacts {
     flex-direction: column;
     align-items: center;
   }
 
-  .header__top {
-    flex-direction: column;
-    align-items: center;
+  .consultation__field, .info {
+    padding: 0 20px;
   }
 
   .header__phone, .header__action {
     margin: 5px auto;
   }
 
-  .info {
-    flex-direction: column;
-    align-items: center;
-  }
   .info__heading {
     text-align: center;
     width: 100%;
+    margin-bottom: 15px;
   }
 
   .section {
@@ -254,10 +386,6 @@ strong {
     top: -0.9em;
   }
 
-  .photos {
-    flex-direction: column;
-    align-items: center;
-  }
   .photos__img {
     margin-top: 10px;
     border: 1px solid #18A0FB;
@@ -277,6 +405,10 @@ strong {
 
   .gallery__caption {
     text-align: center;
+  }
+
+  .testimonials {
+    grid-template-columns: repeat(1, 300px);
   }
 }
 
